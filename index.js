@@ -233,11 +233,13 @@ function getArtistByIndex(array, index) {
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(arr){
+  let newArr = [];
   for(let i = 0; i < arr.length; i++){
     if((arr[i]['years'].split(' ')[0] >= 1900) && (arr[i]['years'].split(' ')[2] < 2000)){
-      return(arr[i]);
+      newArr.push(arr[i].name);
     }
   }
+  return newArr
 }
 console.log(get20s(artists));
 
@@ -289,7 +291,7 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 function lotsOfArt(arr){
   let newArr = [];
-  for (i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++){
     if (arr[i].paintings > 100){
       newArr.push(arr[i].name);
     }
@@ -323,11 +325,9 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
+function getHTML(data){
 
-    /* Code here */
-
-  }
+}
 
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
